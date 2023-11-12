@@ -42,7 +42,7 @@ def init_logger(name: str) -> logging.Logger:
 
 
 # Flask route для обработки входящих событий
-@app.route('/', methods=['POST', 'GET'])
+@app.route(os.getenv('WEBHOOK_ENDPOINT'), methods=['POST', 'GET'])
 async def hook():
     if request.method == 'POST':
         try:
