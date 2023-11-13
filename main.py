@@ -72,7 +72,7 @@ async def hook():
                             break
                         except Exception as e:
                             logger.error(
-                                f'Sending error try {str(i + 1)}. Resending message to Telegram channel({TELEGRAM_CHANNEL_ID[ticket_cashbox_id]} {ticket_date}):{e}')
+                                f'Sending error try {str(i + 1)}. Resending message to Telegram channel({TELEGRAM_CHANNEL_ID}):{e}')
                             continue
         except Exception as error:
             logger.error(f'Error processing request:\n{error}')
